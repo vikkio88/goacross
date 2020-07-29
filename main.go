@@ -51,10 +51,6 @@ func run() {
 			win.SetClosed(true)
 		}
 
-		if win.JustPressed(pixelgl.KeyRight) {
-			sprite.Set()
-		}
-
 		win.Update()
 	}
 }
