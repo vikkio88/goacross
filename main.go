@@ -4,6 +4,8 @@ import (
 	"image"
 	"os"
 
+	_ "image/png"
+
 	"github.com/faiface/pixel"
 	"github.com/faiface/pixel/pixelgl"
 	"golang.org/x/image/colornames"
@@ -47,6 +49,10 @@ func run() {
 	for !win.Closed() {
 		if win.JustPressed(pixelgl.KeyEscape) || win.JustPressed(pixelgl.KeyQ) {
 			win.SetClosed(true)
+		}
+
+		if win.JustPressed(pixelgl.KeyRight) {
+			sprite.Set()
 		}
 
 		win.Update()
